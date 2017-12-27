@@ -44,9 +44,9 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static('frontend/build'));
 }
 
-app.get('*', function (req, res){
-    res.sendFile(path.resolve(__dirname, 'frontend/build', 'index.html'))
-})
+// app.get('*', function (req, res){
+//     res.sendFile(path.resolve(__dirname, 'frontend/build', 'index.html'))
+// })
 
 //To prevent errors from Cross Origin Resource Sharing, we will set
 //our headers to allow CORS with middleware like so:
