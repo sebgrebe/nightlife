@@ -1,7 +1,6 @@
 //Package dependencies
 var express = require('express')
 var path = require('path')
-// var passport = require('passport')
 var logger = require('morgan')
 var cookieParser = require('cookie-parser')
 var bodyParser = require('body-parser')
@@ -44,6 +43,10 @@ app.use(function(err, req, res, next) {
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('frontend/build'));
 }
+
+app.get('*', function (req, res){
+    res.sendFile(path.resolve(__dirname, 'frontend/build', 'index.html'))
+})
 
 //To prevent errors from Cross Origin Resource Sharing, we will set
 //our headers to allow CORS with middleware like so:
