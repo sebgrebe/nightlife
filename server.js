@@ -40,6 +40,11 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+//Express only serves static assets in production
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('frontend/build'));
+}
+
 //To prevent errors from Cross Origin Resource Sharing, we will set
 //our headers to allow CORS with middleware like so:
 app.use(cors({credentials: true, origin: true}))
