@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08f298fa-4c64-49fd-8fb5-16060bebe5fb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/asset-manifest.json" afterPath="$PROJECT_DIR$/frontend/build/asset-manifest.json" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/index.html" afterPath="$PROJECT_DIR$/frontend/build/index.html" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/service-worker.js" afterPath="$PROJECT_DIR$/frontend/build/service-worker.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/static/css/main.6cfc95d9.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/static/css/main.6cfc95d9.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/main.5c1a2b4a.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/main.5c1a2b4a.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles/stylesheet.css" afterPath="$PROJECT_DIR$/frontend/src/styles/stylesheet.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,10 +29,10 @@
       <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/styles/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+            <state relative-caret-position="119">
+              <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
               <folding>
-                <element signature="e#1703#1770#0" expanded="false" />
+                <element signature="e#1706#1773#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -286,12 +279,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513851270866</updated>
-      <workItem from="1513851273632" duration="117790000" />
+      <workItem from="1513851273632" duration="118251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117790000" />
+    <option name="totallyTimeSpent" value="118251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="24" width="1282" height="709" extended-state="6" />
@@ -681,10 +674,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/styles/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        <state relative-caret-position="119">
+          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
           <folding>
-            <element signature="e#1703#1770#0" expanded="false" />
+            <element signature="e#1706#1773#0" expanded="false" />
           </folding>
         </state>
       </provider>
