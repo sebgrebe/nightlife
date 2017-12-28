@@ -48,7 +48,7 @@ class BarList extends React.Component {
                                     <img className="bar_photo" alt="bar" src={bar.photo_url}/>}
                             </div>
                             <div className="bar_info">
-                                <a href={bar.maps_url} target="_blank">
+                                <a className="bar_a" href={bar.maps_url} target="_blank">
                                     <div className="bar_name">{bar.name}</div>
                                 </a>
                                 <div>{bar.formatted_address}</div>
