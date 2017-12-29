@@ -17,7 +17,7 @@ var port = process.env.PORT || 3001;
 var app = express();
 
 if (process.env.NODE_ENV === 'production') {
-    db_url = process.env.MONGO_DB_URI
+    db_url = process.env.MONGODB_URI
 }
 else {
     db_url = process.env.MONGO_DB_LOCAL
