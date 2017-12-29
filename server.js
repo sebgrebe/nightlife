@@ -10,14 +10,21 @@ var cors = require('cors')
 //File dependencies
 var index = require('./routes/index');
 var users = require('./routes/users');
-var ConfigDB = require('./config/db.js')
 
 //Other vars
+var db_url
 var port = process.env.PORT || 3001;
 var app = express();
 
+if (process.env.NODE_ENV === 'production') {
+    db_url = process.env.MONGO_DB_URI
+}
+else {
+    db_url = process.env.MONGO_DB_LOCAL
+}
+
 //configure database
-mongoose.connect(ConfigDB.url)
+mongoose.connect(db_url)
 
 //set up app
 // uncomment after placing your favicon in /public
