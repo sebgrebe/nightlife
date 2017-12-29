@@ -23,6 +23,7 @@ else {
     db_url = process.env.MONGO_DB_LOCAL
 }
 
+console.log("db_url: "+db_url)
 //configure database
 mongoose.connect(db_url)
 
