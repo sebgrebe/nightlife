@@ -1,4 +1,3 @@
-var passport = require('passport')
 var findBars = require('../modules/findBars')
 var findGoing = require('../modules/findGoing')
 var save = require('../modules/save')
