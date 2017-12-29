@@ -8,6 +8,12 @@ export const login = (user_id) => ({
     user_id: user_id
 })
 
+export const save_env = (api,env_var) => ({
+    type: 'SAVE_ENV',
+    env_var: env_var,
+    api: api
+})
+
 export const set_message = (message) => ({
     type: 'MESSAGE',
     message: message

@@ -1,6 +1,6 @@
 //Package dependencies
+require('dotenv').config()
 var express = require('express')
-var path = require('path')
 var logger = require('morgan')
 var cookieParser = require('cookie-parser')
 var bodyParser = require('body-parser')
@@ -15,7 +15,6 @@ var ConfigDB = require('./config/db.js')
 //Other vars
 var port = process.env.PORT || 3001;
 var app = express();
-
 
 //configure database
 mongoose.connect(ConfigDB.url)

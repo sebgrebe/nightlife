@@ -1,7 +1,7 @@
 var request = require('request')
 var handleError = require('./handleError')
 
-var google_api_key = 'AIzaSyCxc66OvtLFxtezLwXdsglKETDVcGSo7qg'
+var google_api_key = process.env.GOOGLE_API_KEY
 
 module.exports = function(url_places,callback) {
 	//make call to Google Places API to get list of places (https://developers.google.com/places/web-service/search#PlaceSearchRequests)

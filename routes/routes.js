@@ -9,6 +9,12 @@ module.exports = (app) => {
 			res.send(response)
 		})
     })
+	app.get('/api/env/fb',(req,res) => {
+		res.send(process.env.FB_APP_ID)
+	})
+    app.get('/api/env/google',(req,res) => {
+        res.send(process.env.GOOGLE_API_KEY)
+    })
 	app.post('/api/search', (req,res) => {
 		findBars(req.body.url, (response) => {
 				res.send(response)

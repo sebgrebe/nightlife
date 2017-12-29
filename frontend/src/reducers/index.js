@@ -2,7 +2,9 @@ export default (state = {
 	bars:{},
 	user_id: '',
 	message: "",
-	listGoing: {}
+	listGoing: {},
+	env_fb: "",
+	env_google: ""
 	}, action) => {
 	switch (action.type) {
 		case 'UPDATE':
@@ -24,6 +26,19 @@ export default (state = {
 			return {
 				...state,
 				listGoing: action.going
+			}
+		case ('SAVE_ENV'):
+			if (action.api === 'fb') {
+                return {
+                    ...state,
+                    env_fb: action.env_var
+                }
+			}
+			else if (action.api === 'google') {
+                return {
+                    ...state,
+                    env_google: action.env_var
+                }
 			}
 		default:
 			return state

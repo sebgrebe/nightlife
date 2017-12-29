@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Script from 'react-load-script';
 import $ from 'jquery';
 
-var google_api_key = 'AIzaSyCxc66OvtLFxtezLwXdsglKETDVcGSo7qg'
 var options = {
 		types: ['geocode']	
 		}
@@ -17,6 +16,22 @@ class Search extends Component {
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
 		this.Search = this.Search.bind(this)
+	}
+	componentDidMount() {
+		$.ajax({
+			url: '/api/env/google',
+			type: 'GET',
+			success: (res) => {
+				this.props.save_env('google',res)
+			},
+			error: (xhr) => {
+				//handles timeout error
+				if (xhr.status === 0) {
+					window.location.reload();
+				}
+				else {alert("Status: "+xhr.status+ ". "+xhr.statusText)}
+			}
+		})
 	}
 	handleChange(event){
 		if (this.state.scriptLoaded) {
@@ -51,8 +66,9 @@ class Search extends Component {
 	  this.setState({ scriptLoaded: true })
 	}
 	Search() {	
-		var url = "";
-		var radius = 10000;
+		let url = "";
+		const radius = 10000;
+        let google_api_key = this.props.state.env_google
 		if (typeof this.state.place === 'object') {
 			url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+this.state.place.lat+","+this.state.place.long+"&radius="+radius+"&type=bar&key="+google_api_key
 		}
@@ -90,21 +106,26 @@ class Search extends Component {
 		})
 	 }
 	render() {
+        let google_api_key = this.props.state.env_google
 		if (this.state.search) {
 			this.Search()
 		}
-		return (
-			<div className="search">
-				<Script
-				url={"https://maps.googleapis.com/maps/api/js?key="+google_api_key+"&libraries=places"} 
-				onCreate={this.handleScriptCreate.bind(this)}
-      			onLoad={this.handleScriptLoad.bind(this)} />
-				<form className="form" onSubmit={this.handleSubmit}>
-					<input type="text" id="autocomplete" className="input" placeholder="Where do you want to go out?" onChange={this.handleChange} />
-					<button className="search_button">Search</button>
-				</form>
-			</div>
-		)
+		if (google_api_key.length > 0) {
+            return (
+                <div className="search">
+                    <Script
+                        url={"https://maps.googleapis.com/maps/api/js?key=" + google_api_key + "&libraries=places"}
+                        onCreate={this.handleScriptCreate.bind(this)}
+                        onLoad={this.handleScriptLoad.bind(this)}/>
+                    <form className="form" onSubmit={this.handleSubmit}>
+                        <input type="text" id="autocomplete" className="input"
+                               placeholder="Where do you want to go out?" onChange={this.handleChange}/>
+                        <button className="search_button">Search</button>
+                    </form>
+                </div>
+            )
+        }
+		else return null
 	}
 }
 
