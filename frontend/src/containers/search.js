@@ -114,7 +114,7 @@ class Search extends Component {
             return (
                 <div className="search">
                     <Script
-                        url={"https://maps.googleapis.com/maps/api/js?key=" + google_api_key + "&libraries=places"}
+                        url={"https://maps.googleapis.com/maps/api/js?key="+google_api_key+"&libraries=places"}
                         onCreate={this.handleScriptCreate.bind(this)}
                         onLoad={this.handleScriptLoad.bind(this)}/>
                     <form className="form" onSubmit={this.handleSubmit}>
