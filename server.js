@@ -12,19 +12,17 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 //Other vars
-var db_url
 var port = process.env.PORT || 3001;
 var app = express();
 
+//configure database
+var db_url
 if (process.env.NODE_ENV === 'production') {
     db_url = process.env.MONGODB_URI
 }
 else {
-    db_url = process.env.MONGO_DB_LOCAL
+    db_url = process.env.MONGODB_LOCAL
 }
-
-console.log("db_url: "+db_url)
-//configure database
 mongoose.connect(db_url)
 
 //set up app
