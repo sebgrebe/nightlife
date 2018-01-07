@@ -18,7 +18,7 @@ const Footer = () => (
             </a>
         </p>
         <p>
-        Source code on <a href="https://github.com/sebgrebe/nightlife" className="logo_link" target="_blank" rel="noopener noreferrer">
+        Source code on <a href="https://github.com/sebgrebe/nightlife" target="_blank" rel="noopener noreferrer">
                  <i className="fa fa-github" aria-hidden="true"></i>
             </a>
         </p>
